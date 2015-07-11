@@ -16,6 +16,11 @@
 		6D9010271B4222EC00736223 /* msse652Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9010261B4222EC00736223 /* msse652Tests.m */; };
 		6D9010321B42257F00736223 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9010311B42257F00736223 /* FirstViewController.m */; };
 		6D9010351B42259100736223 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9010341B42259100736223 /* SecondViewController.m */; };
+		6DC1A6BD1B501D38004B14D9 /* ProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6BC1B501D38004B14D9 /* ProgramsTableViewController.m */; };
+		6DC1A6C01B501D52004B14D9 /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6BF1B501D52004B14D9 /* CoursesTableViewController.m */; };
+		6DC1A6C41B5097D4004B14D9 /* Program.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6C31B5097D4004B14D9 /* Program.m */; };
+		6DC1A6C71B5097E8004B14D9 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6C61B5097E8004B14D9 /* Course.m */; };
+		6DC1A6CB1B51B176004B14D9 /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6CA1B51B176004B14D9 /* CourseDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +47,20 @@
 		6D9010201B4222EC00736223 /* msse652Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msse652Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D9010251B4222EC00736223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D9010261B4222EC00736223 /* msse652Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = msse652Tests.m; sourceTree = "<group>"; };
-		6D9010301B42257F00736223 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		6D9010311B42257F00736223 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		6D9010331B42259100736223 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		6D9010341B42259100736223 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		6D9010301B42257F00736223 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = msse652/FirstViewController.h; sourceTree = "<group>"; };
+		6D9010311B42257F00736223 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = msse652/FirstViewController.m; sourceTree = "<group>"; };
+		6D9010331B42259100736223 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = msse652/SecondViewController.h; sourceTree = "<group>"; };
+		6D9010341B42259100736223 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = msse652/SecondViewController.m; sourceTree = "<group>"; };
+		6DC1A6BB1B501D38004B14D9 /* ProgramsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramsTableViewController.h; sourceTree = "<group>"; };
+		6DC1A6BC1B501D38004B14D9 /* ProgramsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramsTableViewController.m; sourceTree = "<group>"; };
+		6DC1A6BE1B501D52004B14D9 /* CoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursesTableViewController.h; sourceTree = "<group>"; };
+		6DC1A6BF1B501D52004B14D9 /* CoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesTableViewController.m; sourceTree = "<group>"; };
+		6DC1A6C21B5097D4004B14D9 /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Program.h; sourceTree = "<group>"; };
+		6DC1A6C31B5097D4004B14D9 /* Program.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Program.m; sourceTree = "<group>"; };
+		6DC1A6C51B5097E8004B14D9 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		6DC1A6C61B5097E8004B14D9 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		6DC1A6C91B51B176004B14D9 /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
+		6DC1A6CA1B51B176004B14D9 /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +84,8 @@
 		6D900FFE1B4222EC00736223 = {
 			isa = PBXGroup;
 			children = (
+				6DC1A6C81B50A153004B14D9 /* View Controllers */,
+				6DC1A6C11B501D71004B14D9 /* Model */,
 				6D9010091B4222EC00736223 /* msse652 */,
 				6D9010231B4222EC00736223 /* msse652Tests */,
 				6D9010081B4222EC00736223 /* Products */,
@@ -92,10 +109,6 @@
 				6D9010111B4222EC00736223 /* ViewController.h */,
 				6D9010121B4222EC00736223 /* ViewController.m */,
 				6D9010141B4222EC00736223 /* Main.storyboard */,
-				6D9010301B42257F00736223 /* FirstViewController.h */,
-				6D9010311B42257F00736223 /* FirstViewController.m */,
-				6D9010331B42259100736223 /* SecondViewController.h */,
-				6D9010341B42259100736223 /* SecondViewController.m */,
 				6D9010171B4222EC00736223 /* Images.xcassets */,
 				6D9010191B4222EC00736223 /* LaunchScreen.xib */,
 				6D90100A1B4222EC00736223 /* Supporting Files */,
@@ -127,6 +140,34 @@
 				6D9010251B4222EC00736223 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DC1A6C11B501D71004B14D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DC1A6C21B5097D4004B14D9 /* Program.h */,
+				6DC1A6C31B5097D4004B14D9 /* Program.m */,
+				6DC1A6C51B5097E8004B14D9 /* Course.h */,
+				6DC1A6C61B5097E8004B14D9 /* Course.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6DC1A6C81B50A153004B14D9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D9010301B42257F00736223 /* FirstViewController.h */,
+				6D9010311B42257F00736223 /* FirstViewController.m */,
+				6D9010331B42259100736223 /* SecondViewController.h */,
+				6D9010341B42259100736223 /* SecondViewController.m */,
+				6DC1A6BB1B501D38004B14D9 /* ProgramsTableViewController.h */,
+				6DC1A6BC1B501D38004B14D9 /* ProgramsTableViewController.m */,
+				6DC1A6BE1B501D52004B14D9 /* CoursesTableViewController.h */,
+				6DC1A6BF1B501D52004B14D9 /* CoursesTableViewController.m */,
+				6DC1A6C91B51B176004B14D9 /* CourseDetailViewController.h */,
+				6DC1A6CA1B51B176004B14D9 /* CourseDetailViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +271,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D9010351B42259100736223 /* SecondViewController.m in Sources */,
+				6DC1A6C01B501D52004B14D9 /* CoursesTableViewController.m in Sources */,
 				6D9010131B4222EC00736223 /* ViewController.m in Sources */,
 				6D9010101B4222EC00736223 /* AppDelegate.m in Sources */,
+				6DC1A6C71B5097E8004B14D9 /* Course.m in Sources */,
+				6DC1A6C41B5097D4004B14D9 /* Program.m in Sources */,
 				6D90100D1B4222EC00736223 /* main.m in Sources */,
+				6DC1A6BD1B501D38004B14D9 /* ProgramsTableViewController.m in Sources */,
+				6DC1A6CB1B51B176004B14D9 /* CourseDetailViewController.m in Sources */,
 				6D9010321B42257F00736223 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +474,7 @@
 				6D90102C1B4222EC00736223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D90102D1B4222EC00736223 /* Build configuration list for PBXNativeTarget "msse652Tests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +483,7 @@
 				6D90102F1B4222EC00736223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
