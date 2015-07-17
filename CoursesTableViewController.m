@@ -11,9 +11,6 @@
 #import "Program.h"
 #import "CourseDetailViewController.h"
 
-
-
-
 @interface CoursesTableViewController ()
 
 @end
@@ -21,20 +18,13 @@
 @implementation CoursesTableViewController
 
 NSMutableArray *courses;
-
 NSXMLParser *xmlParser;
-
 NSString *currentElement;
 int currentIdent;
 NSString *currentName;
-
 Course *currentCourse;
 Program *currentProgram;
-
 Course *selectedCourse;
-
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,13 +33,8 @@ Course *selectedCourse;
         courses = [[NSMutableArray alloc] init];
     }
     
-    
     [self downloadCourses];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,7 +56,6 @@ Course *selectedCourse;
     return courses.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SCISCoursePrototypeCell" forIndexPath:indexPath];
     
@@ -86,9 +70,6 @@ Course *selectedCourse;
     
     return cell;
 }
-
-
-
 
 #pragma mark - Navigation
 
@@ -134,8 +115,6 @@ Course *selectedCourse;
 
 -(void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
-
-    
     if ([elementName isEqualToString:@"course"]) {
         currentCourse = [[Course alloc] init];
     } else if ([elementName isEqualToString:@"pid"]) {
@@ -146,8 +125,6 @@ Course *selectedCourse;
 }
 
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    
-
     
     if ([elementName isEqualToString:@"course"]) {
         
@@ -174,7 +151,6 @@ Course *selectedCourse;
         currentCourse.programName = currentProgram;
         currentProgram = nil;
     }
-    
 }
 
 -(void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
@@ -189,9 +165,5 @@ Course *selectedCourse;
 -(void) parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
     NSLog(@"XML Parsing Error: %@", parseError);
 }
-
-
-
-
 
 @end

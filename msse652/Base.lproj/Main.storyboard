@@ -81,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYo-sl-D5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="420"/>
+            <point key="canvasLocation" x="1764" y="420"/>
         </scene>
         <!--SCIS Courses-->
         <scene sceneID="Nj3-vR-pBz">
@@ -125,7 +125,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="644-uU-itN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="420"/>
+            <point key="canvasLocation" x="2475" y="420"/>
         </scene>
         <!--SCIS Course Detail-->
         <scene sceneID="HOs-Ta-NoV">
@@ -199,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cen-Og-L2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="418"/>
+            <point key="canvasLocation" x="3240" y="418"/>
         </scene>
         <!--My Nav-->
         <scene sceneID="cGx-ka-UFW">
@@ -216,7 +216,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a13-ZV-Pom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="418"/>
+            <point key="canvasLocation" x="944" y="418"/>
         </scene>
         <!--Second-->
         <scene sceneID="nul-tP-u7Y">
@@ -334,6 +334,33 @@
             </objects>
             <point key="canvasLocation" x="-526" y="1922"/>
         </scene>
+        <!--AFN-->
+        <scene sceneID="uCx-fm-LJM">
+            <objects>
+                <tableViewController title="AFN" id="Vfa-qe-WlR" customClass="AFNTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xJU-CK-azK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AFNPrototypeCell" id="6yL-nF-WrZ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6yL-nF-WrZ" id="n3c-6O-5Un">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vfa-qe-WlR" id="fzR-SL-pcF"/>
+                            <outlet property="delegate" destination="Vfa-qe-WlR" id="slO-i7-Wj7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Pqi-Ml-JNr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YzV-FY-GQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="160"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F4K-Qm-yKZ">
             <objects>
@@ -349,11 +376,31 @@
                         <segue destination="BNa-oE-KMP" kind="relationship" relationship="viewControllers" id="6B9-Qt-MPS"/>
                         <segue destination="sFM-pT-YBt" kind="relationship" relationship="viewControllers" id="YCO-aJ-wCR"/>
                         <segue destination="eoe-Yr-eSa" kind="relationship" relationship="viewControllers" id="ZuQ-5K-FZE"/>
+                        <segue destination="yxU-rI-TTd" kind="relationship" relationship="viewControllers" id="Zce-RC-b1h"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaW-fA-5YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-888" y="903"/>
+        </scene>
+        <!--AFN-->
+        <scene sceneID="mcq-zN-bmn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yxU-rI-TTd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="AFN" id="1Sq-t3-yqp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KT7-GC-GVC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vfa-qe-WlR" kind="relationship" relationship="rootViewController" id="2Z1-7p-wly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUT-Cf-Hfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888" y="160"/>
         </scene>
     </scenes>
 </document>

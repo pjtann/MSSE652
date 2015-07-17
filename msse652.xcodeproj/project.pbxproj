@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4F7D6A1B57350C00422A52 /* AFNTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F7D691B57350C00422A52 /* AFNTableViewController.m */; };
 		6D90100D1B4222EC00736223 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90100C1B4222EC00736223 /* main.m */; };
 		6D9010101B4222EC00736223 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90100F1B4222EC00736223 /* AppDelegate.m */; };
 		6D9010131B4222EC00736223 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9010121B4222EC00736223 /* ViewController.m */; };
@@ -21,6 +22,7 @@
 		6DC1A6C41B5097D4004B14D9 /* Program.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6C31B5097D4004B14D9 /* Program.m */; };
 		6DC1A6C71B5097E8004B14D9 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6C61B5097E8004B14D9 /* Course.m */; };
 		6DC1A6CB1B51B176004B14D9 /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1A6CA1B51B176004B14D9 /* CourseDetailViewController.m */; };
+		E691D3DFC9D7F9725237F333 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6562E903D66C0B8F416B49F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D4F7D681B57350C00422A52 /* AFNTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNTableViewController.h; path = msse652/AFNTableViewController.h; sourceTree = "<group>"; };
+		6D4F7D691B57350C00422A52 /* AFNTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNTableViewController.m; path = msse652/AFNTableViewController.m; sourceTree = "<group>"; };
 		6D9010071B4222EC00736223 /* msse652.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msse652.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D90100B1B4222EC00736223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D90100C1B4222EC00736223 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +65,9 @@
 		6DC1A6C61B5097E8004B14D9 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		6DC1A6C91B51B176004B14D9 /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
 		6DC1A6CA1B51B176004B14D9 /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
+		80288D23F39D188C68B88159 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C6562E903D66C0B8F416B49F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E872722DDA48527455B7E9A1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E691D3DFC9D7F9725237F333 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4706D8EABB376AD3A9C47900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6562E903D66C0B8F416B49F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6D900FFE1B4222EC00736223 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +105,8 @@
 				6D9010091B4222EC00736223 /* msse652 */,
 				6D9010231B4222EC00736223 /* msse652Tests */,
 				6D9010081B4222EC00736223 /* Products */,
+				9071D232C9D39B47FEA29387 /* Pods */,
+				4706D8EABB376AD3A9C47900 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,8 +184,19 @@
 				6DC1A6BF1B501D52004B14D9 /* CoursesTableViewController.m */,
 				6DC1A6C91B51B176004B14D9 /* CourseDetailViewController.h */,
 				6DC1A6CA1B51B176004B14D9 /* CourseDetailViewController.m */,
+				6D4F7D681B57350C00422A52 /* AFNTableViewController.h */,
+				6D4F7D691B57350C00422A52 /* AFNTableViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9071D232C9D39B47FEA29387 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80288D23F39D188C68B88159 /* Pods.debug.xcconfig */,
+				E872722DDA48527455B7E9A1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D90102A1B4222EC00736223 /* Build configuration list for PBXNativeTarget "msse652" */;
 			buildPhases = (
+				23968CBCAB97DF30CEF65BDD /* Check Pods Manifest.lock */,
 				6D9010031B4222EC00736223 /* Sources */,
 				6D9010041B4222EC00736223 /* Frameworks */,
 				6D9010051B4222EC00736223 /* Resources */,
+				6CEDC9C20F87D7D3355B761D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +296,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23968CBCAB97DF30CEF65BDD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6CEDC9C20F87D7D3355B761D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D9010031B4222EC00736223 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,6 +339,7 @@
 				6D9010131B4222EC00736223 /* ViewController.m in Sources */,
 				6D9010101B4222EC00736223 /* AppDelegate.m in Sources */,
 				6DC1A6C71B5097E8004B14D9 /* Course.m in Sources */,
+				6D4F7D6A1B57350C00422A52 /* AFNTableViewController.m in Sources */,
 				6DC1A6C41B5097D4004B14D9 /* Program.m in Sources */,
 				6D90100D1B4222EC00736223 /* main.m in Sources */,
 				6DC1A6BD1B501D38004B14D9 /* ProgramsTableViewController.m in Sources */,
@@ -403,6 +468,7 @@
 		};
 		6D90102B1B4222EC00736223 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80288D23F39D188C68B88159 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = msse652/Info.plist;
@@ -413,6 +479,7 @@
 		};
 		6D90102C1B4222EC00736223 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E872722DDA48527455B7E9A1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = msse652/Info.plist;
