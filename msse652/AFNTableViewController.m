@@ -11,7 +11,7 @@
 #import "Program.h"
 #import "Course.h"
 
-
+// adding another comment just to see if we can get all the files up to GitHub
 @interface AFNTableViewController ()
 
 @property(nonatomic, strong) NSMutableDictionary *currentDictionary;   // current section being parsed
