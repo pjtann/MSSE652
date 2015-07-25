@@ -298,6 +298,34 @@
             </objects>
             <point key="canvasLocation" x="-1278" y="1916"/>
         </scene>
+        <!--RestKit-->
+        <scene sceneID="BHt-jK-OeE">
+            <objects>
+                <tableViewController id="bgb-Ym-dGB" customClass="RestKitTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="g02-Mm-wmU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestKitPrototypeCell" id="2hl-GP-gZZ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2hl-GP-gZZ" id="nr6-2c-nF6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bgb-Ym-dGB" id="nOg-ub-T8o"/>
+                            <outlet property="delegate" destination="bgb-Ym-dGB" id="eAR-ib-Mvg"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="RestKit" id="nZ8-VW-DRw" userLabel="RestKit"/>
+                    <navigationItem key="navigationItem" id="xTn-zn-fSN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wpa-6r-4gX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="1960"/>
+        </scene>
         <!--Contacts-->
         <scene sceneID="Xvp-nj-uNu">
             <objects>
@@ -349,6 +377,7 @@
                         <segue destination="BNa-oE-KMP" kind="relationship" relationship="viewControllers" id="6B9-Qt-MPS"/>
                         <segue destination="sFM-pT-YBt" kind="relationship" relationship="viewControllers" id="YCO-aJ-wCR"/>
                         <segue destination="eoe-Yr-eSa" kind="relationship" relationship="viewControllers" id="ZuQ-5K-FZE"/>
+                        <segue destination="bgb-Ym-dGB" kind="relationship" relationship="viewControllers" id="jPe-1Y-aa6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaW-fA-5YK" userLabel="First Responder" sceneMemberID="firstResponder"/>

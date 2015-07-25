@@ -20,8 +20,8 @@
     
     self.courseId.text = [NSString stringWithFormat:@"%d", self.course.courseId];
     self.courseName.text = self.course.courseName;
-    self.programId.text = [NSString stringWithFormat:@"%d", self.course.programName.programId];
-    self.programName.text = self.course.programName.programName;
+    //self.programId.text = [NSString stringWithFormat:@"%d", self.course.programName.programId];
+    //self.programName.text = self.course.programName.programName;
     
     
     

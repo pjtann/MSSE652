@@ -80,9 +80,9 @@ NSMutableArray *programs;
         for (id key in programDict) {
             id value = [programDict objectForKey:key];
             if ([key isEqualToString:@"id"]) {
-                program.programId = [value intValue];
+                //program.programId = [value intValue];
             } else if ([key isEqualToString:@"name"]) {
-                program.programName = value;
+                //program.programName = value;
             }
         }
         
@@ -122,9 +122,8 @@ NSMutableArray *programs;
         cell = [[UITableViewCell alloc] init];
     }
   
-    cell.textLabel.text = ((Program *)[programs objectAtIndex:indexPath.row]).programName;
-    
-    //cell.detailTextLabel.text = auditionItem.auditionType;
+    //cell.textLabel.text = ((Program *)[programs objectAtIndex:indexPath.row]).programName;
+
     
     return cell;
 }

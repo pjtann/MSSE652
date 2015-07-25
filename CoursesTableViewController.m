@@ -82,7 +82,7 @@ Course *selectedCourse;
     }
     
     cell.textLabel.text = ((Course *)[courses objectAtIndex:indexPath.row]).courseName;
-    cell.detailTextLabel.text = ((Program *)((Course *)[courses objectAtIndex:indexPath.row]).programName).programName;
+    //cell.detailTextLabel.text = ((Program *)((Course *)[courses objectAtIndex:indexPath.row]).programName).programName;
     
     return cell;
 }
@@ -157,7 +157,7 @@ Course *selectedCourse;
     } else if ([elementName isEqualToString:@"id"]){
         
         if (currentProgram != nil) {
-            currentProgram.programId = currentIdent;
+            //currentProgram.programId = currentIdent;
         } else {
             currentCourse.courseId = currentIdent;
         }
@@ -165,7 +165,7 @@ Course *selectedCourse;
     } else if ([elementName isEqualToString:@"name"]){
         
         if (currentProgram != nil) {
-            currentProgram.programName = [[NSString alloc] initWithString:currentName];
+            //currentProgram.programName = [[NSString alloc] initWithString:currentName];
         } else {
             currentCourse.courseName = [[NSString alloc] initWithString:currentName];
         }

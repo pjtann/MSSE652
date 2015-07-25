@@ -7,8 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "Program.h"
+#import <RestKit/RestKit.h>
+
+
 
 @interface AppDelegate ()
+
+//@property (strong) RKManagedObjectStore *managedObjectStore;
+
 
 @end
 
@@ -17,7 +24,48 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // call method to initialize the RestKit
+    [self initializeRestKit];
+    
+    
     return YES;
+}
+// method to initialize the RestKit
+-(void) initializeRestKit{
+    
+    // initialize the object manager
+    RKObjectManager *manager = [RKObjectManager managerWithBaseURL: [NSURL URLWithString:@"http:////regisscis.net/Regis2/webresources/regis2.program"]];
+    //RKObjectManager *manager = [RKObjectManager managerWithBaseURL: [NSURL URLWithString:@"http://regisscis.net/Regis2/webresources/regis2.course"]];
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    manager.managedObjectStore = managedObjectStore;
+    
+    // create a map for the Program class
+    RKEntityMapping *programMapping = [RKEntityMapping mappingForEntityForName: NSStringFromClass([Program class]) inManagedObjectStore:manager.managedObjectStore];
+    // the unique identifier attribute
+    programMapping.identificationAttributes = @[@"id"];
+    // all other attributes - format: JSON attribute: entity attribute
+    [programMapping addAttributeMappingsFromDictionary:@{@"name" : @"name"}];
+    
+                                                                     
+    //NSString *URLString = [NSString stringWithFormat:@"http://regisscis.net/Regis2/webresources/regis2.program"];
+    //NSURL *url = [NSURL URLWithString:URLString];
+                                                                     
+                                                                     
+                                                                     
+    
+    // create the persistence store (mysqlite)
+    [managedObjectStore createPersistentStoreCoordinator];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent: @"SCIS.sqlite"];
+    NSError *error;
+    NSPersistentStore *persistenceStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath: nil withConfiguration:nil options: @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption: @YES} error:&error];
+    [managedObjectStore createManagedObjectContexts];
+    
+    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+    
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
