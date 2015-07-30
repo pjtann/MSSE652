@@ -27,16 +27,21 @@
     
     // call method to initialize the RestKit
     [self initializeRestKit];
-    
-    
+
     return YES;
 }
 // method to initialize the RestKit
 -(void) initializeRestKit{
     
-    // initialize the object manager
-    RKObjectManager *manager = [RKObjectManager managerWithBaseURL: [NSURL URLWithString:@"http:////regisscis.net/Regis2/webresources/regis2.program"]];
-    //RKObjectManager *manager = [RKObjectManager managerWithBaseURL: [NSURL URLWithString:@"http://regisscis.net/Regis2/webresources/regis2.course"]];
+    // initialize the object manager with remote file
+    RKObjectManager *manager = [RKObjectManager managerWithBaseURL: [NSURL URLWithString:@"http://regisscis.net/Regis2/webresources/regis2.program"]];
+    
+    [manager.HTTPClient setDefaultHeader:@"GET" value:@"application/json"];
+
+    
+    // unremark below to test with local file instead of remote
+    //RKObjectManager *manager = [RKObjectManager managerWithBaseURL: [NSURL URLWithString:@"http:////Users/PT/Documents/Development/Regis/MSSE-652/Projects/msse652/ProgramData"]];
+
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
     manager.managedObjectStore = managedObjectStore;
@@ -46,14 +51,7 @@
     // the unique identifier attribute
     programMapping.identificationAttributes = @[@"id"];
     // all other attributes - format: JSON attribute: entity attribute
-    [programMapping addAttributeMappingsFromDictionary:@{@"name" : @"name"}];
-    
-                                                                     
-    //NSString *URLString = [NSString stringWithFormat:@"http://regisscis.net/Regis2/webresources/regis2.program"];
-    //NSURL *url = [NSURL URLWithString:URLString];
-                                                                     
-                                                                     
-                                                                     
+    [programMapping addAttributeMappingsFromDictionary:@{@"id" : @"id" , @"name" : @"name"}];
     
     // create the persistence store (mysqlite)
     [managedObjectStore createPersistentStoreCoordinator];
@@ -64,8 +62,26 @@
     
     managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
     
+    // dump file path to log if needed for troubleshooting
+    //NSLog(@"\n StorePath: %@", storePath);
     
     
+    //****************************************************
+    
+    // added
+    RKResponseDescriptor *ProgramDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:programMapping method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    // create URL request and set it up for JSON
+    NSURL *url = [NSURL URLWithString:@"http://regisscis.net/Regis2/webresources/regis2.program"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    // map Program entities
+    RKManagedObjectRequestOperation *managedObjectRequestOperation = [[RKManagedObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ProgramDescriptor]];
+    managedObjectRequestOperation.managedObjectContext = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    managedObjectRequestOperation.managedObjectCache = [RKManagedObjectStore defaultStore].managedObjectCache;
+    [manager enqueueObjectRequestOperation:managedObjectRequestOperation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

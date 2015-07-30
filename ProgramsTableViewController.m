@@ -8,6 +8,8 @@
 
 #import "ProgramsTableViewController.h"
 #import "Program.h"
+#import "Pgm.h"
+
 
 
 @interface ProgramsTableViewController ()
@@ -76,17 +78,17 @@ NSMutableArray *programs;
         NSString *item = array[i];
         
         NSDictionary *programDict = array[i];
-        Program *program = [[Program alloc]init];
+        Pgm *pgm = [[Pgm alloc]init];
         for (id key in programDict) {
             id value = [programDict objectForKey:key];
             if ([key isEqualToString:@"id"]) {
-                //program.programId = [value intValue];
+                pgm.pgmId = [value intValue];
             } else if ([key isEqualToString:@"name"]) {
-                //program.programName = value;
+                pgm.pgmName = value;
             }
         }
         
-        [programs addObject:program];
+        [programs addObject:pgm];
 
         
     }
@@ -122,7 +124,7 @@ NSMutableArray *programs;
         cell = [[UITableViewCell alloc] init];
     }
   
-    //cell.textLabel.text = ((Program *)[programs objectAtIndex:indexPath.row]).programName;
+    cell.textLabel.text = ((Pgm *)[programs objectAtIndex:indexPath.row]).pgmName;
 
     
     return cell;

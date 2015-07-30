@@ -16,9 +16,9 @@
 @property (nonatomic, retain) NSString * name;
 
 // properties for NSURL tab of programs and courses
-//@property (nonatomic) int programId;
-//@property (nonatomic) NSString *programName;
-//-(instancetype) initWithId:(int) ident andName:(NSString *) name;
+@property (nonatomic) int programId;
+@property (nonatomic) NSString *programName;
+
 
 
 @end

@@ -14,20 +14,22 @@
 @dynamic id;
 @dynamic name;
 
+@dynamic programId;
+@dynamic programName;
 
-//-(NSString *) description {
-//    return [NSString stringWithFormat:@"\n ProgramId: %i \n ProgramName: %@", _programId, _programName];
-//    
-//}
-//
-//-(instancetype) initWithId: (int) ident andName: (NSString *) name{
-//    self = [super init];
-//    if (self) {
-//        _programId = ident;
-//        _programName = name;
-//    }
-//    return self;
-//}
+-(NSString *) description {
+    return [NSString stringWithFormat:@"\n ProgramId: %i \n ProgramName: %@", self.programId, self.programName];
+    
+}
+
+-(instancetype) initWithId: (int) ident andName: (NSString *) name{
+    self = [super init];
+    if (self) {
+        self.programId = ident;
+        self.programName = name;
+    }
+    return self;
+}
 
 
 

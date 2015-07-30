@@ -360,12 +360,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yS-l5-7pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-526" y="1922"/>
+            <point key="canvasLocation" x="-518" y="1960"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TWSocial-->
+        <scene sceneID="upW-qu-Nlq">
+            <objects>
+                <viewController title="TWSocial" id="y6G-AF-IUc" customClass="TWViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ute-0I-cW6"/>
+                        <viewControllerLayoutGuide type="bottom" id="wQb-Rp-QOz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VAi-Bk-6w2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TWSocial" id="5gR-xq-d2i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeF-bA-wgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1578" y="481"/>
+        </scene>
+        <!--FBSocial-->
+        <scene sceneID="1iu-wy-ZZa">
+            <objects>
+                <viewController title="FBSocial" id="eFi-DA-e8a" customClass="FBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p8z-Am-wvV"/>
+                        <viewControllerLayoutGuide type="bottom" id="tPl-Sf-rdu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u0C-iY-ECc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="FBSocial" id="QBc-OH-BkD"/>
+                    <connections>
+                        <segue destination="UmI-Ud-M80" kind="presentation" identifier="segueFromFBToTab" id="YId-c7-Ch8"/>
+                        <segue destination="VcH-P5-TXt" kind="presentation" identifier="segueFromFBToContacts" id="dNS-FM-klu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ut6-c3-fa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888" y="215"/>
+        </scene>
+        <!--MSSE652 Tab Bar Controller-->
         <scene sceneID="F4K-Qm-yKZ">
             <objects>
-                <tabBarController id="UmI-Ud-M80" sceneMemberID="viewController">
+                <tabBarController title="MSSE652 Tab Bar Controller" id="UmI-Ud-M80" customClass="MSSE652TabBarController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="tqB-yV-IAa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -378,6 +420,8 @@
                         <segue destination="sFM-pT-YBt" kind="relationship" relationship="viewControllers" id="YCO-aJ-wCR"/>
                         <segue destination="eoe-Yr-eSa" kind="relationship" relationship="viewControllers" id="ZuQ-5K-FZE"/>
                         <segue destination="bgb-Ym-dGB" kind="relationship" relationship="viewControllers" id="jPe-1Y-aa6"/>
+                        <segue destination="eFi-DA-e8a" kind="relationship" relationship="viewControllers" id="6Xm-Bp-cQd"/>
+                        <segue destination="y6G-AF-IUc" kind="relationship" relationship="viewControllers" id="gLU-7M-6hG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaW-fA-5YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,4 +429,7 @@
             <point key="canvasLocation" x="-888" y="903"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gUt-1w-UQo"/>
+    </inferredMetricsTieBreakers>
 </document>

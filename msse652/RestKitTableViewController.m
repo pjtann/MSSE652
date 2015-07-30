@@ -10,20 +10,16 @@
 #import "Program.h"
 #import <RestKit/RestKit.h>
 
-
-
 @interface RestKitTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-
 
 @end
 
 @implementation RestKitTableViewController
 
 NSMutableArray *restKitPrograms;
-
-
+NSMutableData *answerData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,14 +33,8 @@ NSMutableArray *restKitPrograms;
     if (restKitPrograms == nil) {
         restKitPrograms = [[NSMutableArray alloc] init];
     }
-    
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"name" parameters:@{@"name" : @"name"} success:nil failure:^(RKObjectRequestOperation *operation, NSError *error){
-        NSLog(@"Error: %@", error);
-        
-    }];
-     
-    self.fetchedResultsController;
-    
+
+    [self fetchedResultsController];
     
 }
 
@@ -58,24 +48,19 @@ NSMutableArray *restKitPrograms;
     if (!_fetchedResultsController) {
         NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName: NSStringFromClass([Program class])];
         fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey: @"name" ascending: YES]];
+        
+        
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest: fetchRequest managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext sectionNameKeyPath:@"name" cacheName:@"Program"];
+        
         self.fetchedResultsController.delegate = self;
-        
-        NSLog(@"sectionNameKeyPath: %@", _fetchedResultsController.sectionNameKeyPath);
-        NSLog(@"cacheName: %@", _fetchedResultsController.cacheName);
-        
-        
-        NSLog(@"fetchRequest: %@", fetchRequest);
-        NSLog(@"fetchedRequestController: %@", _fetchedResultsController);
-       
-        [restKitPrograms addObject:_fetchedResultsController];
-        NSLog(@"restKitPrograms: %@", restKitPrograms);
         
         NSError *error;
         [self.fetchedResultsController performFetch:&error];
-        NSLog(@"%@", [self.fetchedResultsController fetchedObjects]);
+
         NSAssert(!error, @"Error performing fetch request: %@", error);
-        
+
+        [restKitPrograms addObject:_fetchedResultsController];
+
     }
     return _fetchedResultsController;
     
@@ -86,19 +71,17 @@ NSMutableArray *restKitPrograms;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     // Return the number of sections.
-    return 1;
+    //return 1;
+    return [[_fetchedResultsController sections] count];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    NSLog(@"restKitPrograms: %@", restKitPrograms);
-    NSLog(@"restKitPrograms.count: %li", restKitPrograms.count);
-    
     
     return restKitPrograms.count;
-
-    
+   
 }
 
 
@@ -106,22 +89,16 @@ NSMutableArray *restKitPrograms;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RestKitPrototypeCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    //cell.textLabel.text = ((Program *)[programs objectAtIndex:indexPath.row]).programName;
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] init];
     }
+
     
-    
-    NSLog(@"\n\n\n\n restKitProgramsAgain: %@", restKitPrograms);
-    
-    NSLog(@"\n indexPath: %@", indexPath);
-    NSLog(@"\n fetchedResultsController again: %@", _fetchedResultsController);
-    
-    
-    Program *restKitPrograms = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = restKitPrograms.name;
-    
+    // fill the cells
+    Program *rkPrograms = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    rkPrograms = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = rkPrograms.name;
     
     return cell;
 }
