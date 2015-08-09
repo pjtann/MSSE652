@@ -37,6 +37,11 @@
 		6DE9E75E1B6847A00067C131 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E75D1B6847A00067C131 /* TWViewController.m */; };
 		6DE9E7611B693A2E0067C131 /* Pgm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7601B693A2E0067C131 /* Pgm.m */; };
 		6DE9E7641B697CF40067C131 /* MSSE652TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7631B697CF40067C131 /* MSSE652TabBarController.m */; };
+		6DE9E7671B6C3CD70067C131 /* iCloudTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7661B6C3CD70067C131 /* iCloudTableViewController.m */; };
+		6DE9E76D1B6D24A00067C131 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE9E76C1B6D24A00067C131 /* CloudKit.framework */; };
+		6DE9E7701B7267810067C131 /* AddNoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E76F1B7267810067C131 /* AddNoteTableViewController.m */; };
+		6DE9E7731B7296950067C131 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7721B7296950067C131 /* Note.m */; };
+		6DE9E7761B729D6A0067C131 /* ShowNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7751B729D6A0067C131 /* ShowNoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,16 @@
 		6DE9E7601B693A2E0067C131 /* Pgm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pgm.m; sourceTree = "<group>"; };
 		6DE9E7621B697CF40067C131 /* MSSE652TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSE652TabBarController.h; sourceTree = "<group>"; };
 		6DE9E7631B697CF40067C131 /* MSSE652TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSE652TabBarController.m; sourceTree = "<group>"; };
+		6DE9E7651B6C3CD70067C131 /* iCloudTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCloudTableViewController.h; sourceTree = "<group>"; };
+		6DE9E7661B6C3CD70067C131 /* iCloudTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCloudTableViewController.m; sourceTree = "<group>"; };
+		6DE9E76B1B6D24570067C131 /* msse652.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = msse652.entitlements; sourceTree = "<group>"; };
+		6DE9E76C1B6D24A00067C131 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		6DE9E76E1B7267810067C131 /* AddNoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteTableViewController.h; sourceTree = "<group>"; };
+		6DE9E76F1B7267810067C131 /* AddNoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteTableViewController.m; sourceTree = "<group>"; };
+		6DE9E7711B7296950067C131 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		6DE9E7721B7296950067C131 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		6DE9E7741B729D6A0067C131 /* ShowNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNoteViewController.h; sourceTree = "<group>"; };
+		6DE9E7751B729D6A0067C131 /* ShowNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNoteViewController.m; sourceTree = "<group>"; };
 		AFCEA944CABEF99B85F27668 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +129,7 @@
 				6D7D2CC31B60081C005DBBC3 /* Security.framework in Frameworks */,
 				6D7D2CC11B600815005DBBC3 /* MobileCoreServices.framework in Frameworks */,
 				6D7D2CBF1B600801005DBBC3 /* CoreData.framework in Frameworks */,
+				6DE9E76D1B6D24A00067C131 /* CloudKit.framework in Frameworks */,
 				6D7D2CBD1B6007F6005DBBC3 /* CFNetwork.framework in Frameworks */,
 				6D7D2C571B5DCDF2005DBBC3 /* libRestKit.a in Frameworks */,
 				38B400990F9E4C57B14F6228 /* libPods.a in Frameworks */,
@@ -164,6 +180,7 @@
 		6D9010091B4222EC00736223 /* msse652 */ = {
 			isa = PBXGroup;
 			children = (
+				6DE9E76B1B6D24570067C131 /* msse652.entitlements */,
 				6D90100E1B4222EC00736223 /* AppDelegate.h */,
 				6D90100F1B4222EC00736223 /* AppDelegate.m */,
 				6D9010111B4222EC00736223 /* ViewController.h */,
@@ -211,6 +228,8 @@
 				6DC1A6C61B5097E8004B14D9 /* Course.m */,
 				6DE9E75F1B693A2E0067C131 /* Pgm.h */,
 				6DE9E7601B693A2E0067C131 /* Pgm.m */,
+				6DE9E7711B7296950067C131 /* Note.h */,
+				6DE9E7721B7296950067C131 /* Note.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -236,6 +255,12 @@
 				6DE9E75D1B6847A00067C131 /* TWViewController.m */,
 				6DE9E7621B697CF40067C131 /* MSSE652TabBarController.h */,
 				6DE9E7631B697CF40067C131 /* MSSE652TabBarController.m */,
+				6DE9E7651B6C3CD70067C131 /* iCloudTableViewController.h */,
+				6DE9E7661B6C3CD70067C131 /* iCloudTableViewController.m */,
+				6DE9E76E1B7267810067C131 /* AddNoteTableViewController.h */,
+				6DE9E76F1B7267810067C131 /* AddNoteTableViewController.m */,
+				6DE9E7741B729D6A0067C131 /* ShowNoteViewController.h */,
+				6DE9E7751B729D6A0067C131 /* ShowNoteViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -252,6 +277,7 @@
 		C13E6E2C7F2D4B0F229E54C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DE9E76C1B6D24A00067C131 /* CloudKit.framework */,
 				6DE9E7501B681AA70067C131 /* Social.framework */,
 				6D7D2CC81B60084F005DBBC3 /* libxml2.dylib */,
 				6D7D2CC61B60083C005DBBC3 /* QuartzCore.framework */,
@@ -317,6 +343,12 @@
 				TargetAttributes = {
 					6D9010061B4222EC00736223 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = P96A547DPY;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					6D90101F1B4222EC00736223 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -406,7 +438,9 @@
 				6D7D2CD61B600EF6005DBBC3 /* Program.m in Sources */,
 				6DE9E7611B693A2E0067C131 /* Pgm.m in Sources */,
 				6DC1A6C01B501D52004B14D9 /* CoursesTableViewController.m in Sources */,
+				6DE9E7731B7296950067C131 /* Note.m in Sources */,
 				6D9010131B4222EC00736223 /* ViewController.m in Sources */,
+				6DE9E7671B6C3CD70067C131 /* iCloudTableViewController.m in Sources */,
 				6D9010101B4222EC00736223 /* AppDelegate.m in Sources */,
 				6DC1A6C71B5097E8004B14D9 /* Course.m in Sources */,
 				6D90100D1B4222EC00736223 /* main.m in Sources */,
@@ -416,6 +450,8 @@
 				6DC1A6CB1B51B176004B14D9 /* CourseDetailViewController.m in Sources */,
 				6DE9E75B1B682BCE0067C131 /* FBViewController.m in Sources */,
 				6D7D2CCC1B6009D1005DBBC3 /* Model.xcdatamodeld in Sources */,
+				6DE9E7761B729D6A0067C131 /* ShowNoteViewController.m in Sources */,
+				6DE9E7701B7267810067C131 /* AddNoteTableViewController.m in Sources */,
 				6D9010321B42257F00736223 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +579,9 @@
 			baseConfigurationReference = 107145F537688B660CF14D6E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = msse652/msse652.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -591,6 +630,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -599,6 +639,9 @@
 			baseConfigurationReference = AFCEA944CABEF99B85F27668 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = msse652/msse652.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -647,6 +690,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
