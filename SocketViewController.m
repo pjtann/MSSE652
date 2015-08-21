@@ -7,6 +7,8 @@
 //
 
 #import "SocketViewController.h"
+#import "SocketSvc.h"
+
 
 @interface SocketViewController ()
 
@@ -17,18 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   
     
-    
-    
-    
-}
-
-
-- (IBAction)socketConnectionAction:(id)sender {
-    
-    
-}
-- (IBAction)sendMessageAction:(id)sender {
 }
 
 
@@ -47,9 +39,16 @@
 }
 */
 
+// OPEN connection button
 - (IBAction)openConnectionButtonAction:(id)sender {
+    [SocketSvc connect];
+   
 }
 
+// SEND button
 - (IBAction)sendMessageButtonAction:(id)sender {
+    [SocketSvc send:self.sendMessageTextField.text];
+    [SocketSvc recieve];
+    
 }
 @end

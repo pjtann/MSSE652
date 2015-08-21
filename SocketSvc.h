@@ -7,18 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SocketService.h"
 
-@interface SocketSvc : NSObject <NSStreamDelegate> // added delegate to use as delegate
 
--(void) connect;
--(void) send: (NSString *) msg;
--(NSString *) retrieve;
--(void) disconnect;
+@interface SocketSvc : NSObject <SocketService, NSStreamDelegate> // added delegate to use as delegate and added socket service protocol
 
-@end
-
-@protocol SocketProtocol <NSObject>
-
+//
+//-(void) connect;
+//-(void) send: (NSString *) msg;
+//-(NSString *) retrieve;
+//-(void) disconnect;
+//
+//@end
+//
+//@protocol SocketProtocol <NSObject>
+//
 
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38B400990F9E4C57B14F6228 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F33D78BD17F6A98EACB535 /* libPods.a */; };
+		6D2A2A071B8394B400C39763 /* SocketRocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2A2A061B8394B400C39763 /* SocketRocketViewController.m */; };
 		6D7D2C571B5DCDF2005DBBC3 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7D2C561B5DCDF2005DBBC3 /* libRestKit.a */; };
 		6D7D2CBD1B6007F6005DBBC3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7D2CBC1B6007F6005DBBC3 /* CFNetwork.framework */; };
 		6D7D2CBF1B600801005DBBC3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7D2CBE1B600801005DBBC3 /* CoreData.framework */; };
@@ -42,6 +43,8 @@
 		6DE9E7701B7267810067C131 /* AddNoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E76F1B7267810067C131 /* AddNoteTableViewController.m */; };
 		6DE9E7731B7296950067C131 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7721B7296950067C131 /* Note.m */; };
 		6DE9E7761B729D6A0067C131 /* ShowNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9E7751B729D6A0067C131 /* ShowNoteViewController.m */; };
+		6DEA9BA71B83D4B100FA53B1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEA9BA61B83D4B100FA53B1 /* libicucore.dylib */; };
+		6DEA9BA91B83D4C100FA53B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEA9BA81B83D4C100FA53B1 /* Foundation.framework */; };
 		6DEF7DEA1B75157200F5FC04 /* SocketSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF7DE91B75157200F5FC04 /* SocketSvc.m */; };
 		6DEF7DED1B7BCF1700F5FC04 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF7DEC1B7BCF1700F5FC04 /* SocketViewController.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,8 @@
 /* Begin PBXFileReference section */
 		107145F537688B660CF14D6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		56F33D78BD17F6A98EACB535 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2A2A051B8394B400C39763 /* SocketRocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRocketViewController.h; sourceTree = "<group>"; };
+		6D2A2A061B8394B400C39763 /* SocketRocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketRocketViewController.m; sourceTree = "<group>"; };
 		6D7D2C561B5DCDF2005DBBC3 /* libRestKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRestKit.a; path = "Pods/../build/Debug-iphoneos/libRestKit.a"; sourceTree = "<group>"; };
 		6D7D2CBC1B6007F6005DBBC3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6D7D2CBE1B600801005DBBC3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -116,6 +121,11 @@
 		6DE9E7721B7296950067C131 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		6DE9E7741B729D6A0067C131 /* ShowNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNoteViewController.h; sourceTree = "<group>"; };
 		6DE9E7751B729D6A0067C131 /* ShowNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNoteViewController.m; sourceTree = "<group>"; };
+		6DEA9B961B83B7D300FA53B1 /* libSocketRocket.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSocketRocket.a; path = "SocketRocket-master/build/Debug-iphoneos/libSocketRocket.a"; sourceTree = "<group>"; };
+		6DEA9B991B83B7DE00FA53B1 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = "SocketRocket-master/build/Debug/SocketRocket.framework"; sourceTree = "<group>"; };
+		6DEA9BA61B83D4B100FA53B1 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6DEA9BA81B83D4C100FA53B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6DEA9BC01B84D8AB00FA53B1 /* SocketService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketService.h; sourceTree = "<group>"; };
 		6DEF7DE81B75157200F5FC04 /* SocketSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketSvc.h; sourceTree = "<group>"; };
 		6DEF7DE91B75157200F5FC04 /* SocketSvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketSvc.m; sourceTree = "<group>"; };
 		6DEF7DEB1B7BCF1700F5FC04 /* SocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
@@ -128,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEA9BA91B83D4C100FA53B1 /* Foundation.framework in Frameworks */,
+				6DEA9BA71B83D4B100FA53B1 /* libicucore.dylib in Frameworks */,
 				6DE9E7511B681AA70067C131 /* Social.framework in Frameworks */,
 				6D7D2CC91B60084F005DBBC3 /* libxml2.dylib in Frameworks */,
 				6D7D2CC71B60083C005DBBC3 /* QuartzCore.framework in Frameworks */,
@@ -157,15 +169,12 @@
 			children = (
 			);
 			name = CoreDataModel;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		6D900FFE1B4222EC00736223 = {
 			isa = PBXGroup;
 			children = (
-				6D7D2CCD1B600C8A005DBBC3 /* CoreDataModel */,
-				6D7D2CCA1B6009D1005DBBC3 /* Model.xcdatamodeld */,
-				6DC1A6C81B50A153004B14D9 /* View Controllers */,
-				6DC1A6C11B501D71004B14D9 /* Model */,
 				6D9010091B4222EC00736223 /* msse652 */,
 				6D9010231B4222EC00736223 /* msse652Tests */,
 				6D9010081B4222EC00736223 /* Products */,
@@ -186,6 +195,10 @@
 		6D9010091B4222EC00736223 /* msse652 */ = {
 			isa = PBXGroup;
 			children = (
+				6DC1A6C11B501D71004B14D9 /* Model */,
+				6DC1A6C81B50A153004B14D9 /* View Controllers */,
+				6D7D2CCA1B6009D1005DBBC3 /* Model.xcdatamodeld */,
+				6D7D2CCD1B600C8A005DBBC3 /* CoreDataModel */,
 				6DE9E76B1B6D24570067C131 /* msse652.entitlements */,
 				6D90100E1B4222EC00736223 /* AppDelegate.h */,
 				6D90100F1B4222EC00736223 /* AppDelegate.m */,
@@ -236,10 +249,12 @@
 				6DE9E7601B693A2E0067C131 /* Pgm.m */,
 				6DE9E7711B7296950067C131 /* Note.h */,
 				6DE9E7721B7296950067C131 /* Note.m */,
+				6DEA9BC01B84D8AB00FA53B1 /* SocketService.h */,
 				6DEF7DE81B75157200F5FC04 /* SocketSvc.h */,
 				6DEF7DE91B75157200F5FC04 /* SocketSvc.m */,
 			);
 			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		6DC1A6C81B50A153004B14D9 /* View Controllers */ = {
@@ -271,8 +286,11 @@
 				6DE9E7751B729D6A0067C131 /* ShowNoteViewController.m */,
 				6DEF7DEB1B7BCF1700F5FC04 /* SocketViewController.h */,
 				6DEF7DEC1B7BCF1700F5FC04 /* SocketViewController.m */,
+				6D2A2A051B8394B400C39763 /* SocketRocketViewController.h */,
+				6D2A2A061B8394B400C39763 /* SocketRocketViewController.m */,
 			);
 			name = "View Controllers";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		91DE0D7D7692FE464C52F9AB /* Pods */ = {
@@ -287,6 +305,10 @@
 		C13E6E2C7F2D4B0F229E54C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DEA9BA81B83D4C100FA53B1 /* Foundation.framework */,
+				6DEA9BA61B83D4B100FA53B1 /* libicucore.dylib */,
+				6DEA9B991B83B7DE00FA53B1 /* SocketRocket.framework */,
+				6DEA9B961B83B7D300FA53B1 /* libSocketRocket.a */,
 				6DE9E76C1B6D24A00067C131 /* CloudKit.framework */,
 				6DE9E7501B681AA70067C131 /* Social.framework */,
 				6D7D2CC81B60084F005DBBC3 /* libxml2.dylib */,
@@ -451,6 +473,7 @@
 				6DEF7DED1B7BCF1700F5FC04 /* SocketViewController.m in Sources */,
 				6DE9E7731B7296950067C131 /* Note.m in Sources */,
 				6D9010131B4222EC00736223 /* ViewController.m in Sources */,
+				6D2A2A071B8394B400C39763 /* SocketRocketViewController.m in Sources */,
 				6DE9E7671B6C3CD70067C131 /* iCloudTableViewController.m in Sources */,
 				6D9010101B4222EC00736223 /* AppDelegate.m in Sources */,
 				6DC1A6C71B5097E8004B14D9 /* Course.m in Sources */,
@@ -594,6 +617,10 @@
 				CODE_SIGN_ENTITLEMENTS = msse652/msse652.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocketRocket-master/build/Debug",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -616,6 +643,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/SocketRocket-master/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -654,6 +682,10 @@
 				CODE_SIGN_ENTITLEMENTS = msse652/msse652.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocketRocket-master/build/Debug",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -676,6 +708,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/SocketRocket-master/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -779,7 +812,8 @@
 				6D7D2CCB1B6009D1005DBBC3 /* Model.xcdatamodel */,
 			);
 			currentVersion = 6D7D2CCB1B6009D1005DBBC3 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

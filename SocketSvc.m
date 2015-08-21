@@ -14,12 +14,18 @@
 NSInputStream *inputStream;
 NSOutputStream *outputStream;
 
--(void) connect {
++(void) connect {
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
     // open the socket
-    //CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"localhost", 8080, &readStream, &writeStream);
-    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"http://www.regisscis.net", 8080, &readStream, &writeStream);
+    
+    //CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"http://www.regisscis.net", 8080, &readStream, &writeStream);
+    
+    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"ws://echo.websocket.org/", 8080, &readStream, &writeStream);
+    
+    
+    
+    
     // cast the streams
     inputStream = (__bridge NSInputStream *) readStream; // had to add _bridge
     outputStream = (__bridge NSOutputStream *) writeStream; // had to add _bridge
@@ -36,33 +42,49 @@ NSOutputStream *outputStream;
     
 }
 
--(void) send:(NSString *)msg{
++(void) send:(NSString *)msg{
     // encode the message
     NSData *data = [[NSData alloc] initWithData:[msg dataUsingEncoding:NSASCIIStringEncoding]];
     // write the encoded message to the output stream
     [outputStream write:[data bytes] maxLength:[data length]];
+    NSLog(@"data: %@", data);
+    NSLog(@"Output stream: %@", outputStream);
     
     
 }
 
--(NSString *) retrieve{
++(NSString *) recieve{
     
-    NSString *msg;
+    NSMutableString *recieveMsg;
     // allocate a buffer
     uint8_t buffer[1024];
     int len=0;
+    
+    NSLog(@"inputStream value: %@", inputStream);
+    
     while ([inputStream hasBytesAvailable]) {
         len=[inputStream read:buffer maxLength:sizeof(buffer)];
         if (len>0) {
             NSString *output = [[NSString alloc]initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
+            
+            NSLog(@"output value: %@", output);
+            
             if (output != nil) {
                 // aggregate the recieved msg strings here
             }
         }
     }
-    
-    return msg;
+    NSLog(@"receiveMsg value: %@", recieveMsg);
+    recieveMsg = inputStream;
+    NSLog(@"receiveMsg value again: %@", recieveMsg);
+    return recieveMsg;
 }
+
++(void) messageRecieved: (NSString *) recieveMessage{
+    
+    
+}
+
 
 -(void) disconnect{
  
