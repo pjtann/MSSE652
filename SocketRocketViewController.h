@@ -15,6 +15,8 @@
 
 //@property (weak, nonatomic) IBOutlet UIButton *sendMessageActionButton;
 
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *rocketStatusLabel;
 

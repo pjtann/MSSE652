@@ -13,7 +13,9 @@
 
 
 
-@interface SocketRocketViewController() <SRWebSocketDelegate>
+
+
+@interface SocketRocketViewController() <SRWebSocketDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *sendMessageActionButton;
 @property (nonatomic, weak) IBOutlet UIButton *closeConnectionActionButton;
@@ -28,21 +30,16 @@ SRWebSocket *_webSocket;
 
 -(void) viewDidLoad{
     
-//    [self hideButtons:self];
-//    
-//    self.sendMessageActionButton.hidden = YES;
-//    self.sendRocketMessageTextField.hidden = YES;
-//    self.recieveRocketMessageTextView.hidden = YES;
-//    self.closeConnectionActionButton.hidden = YES;
+    [super viewDidLoad];
 
 }
 
--(IBAction)hideButtons:(id)sender{
-    self.sendMessageActionButton.hidden = YES;
-    self.sendRocketMessageTextField.hidden = YES;
-    self.recieveRocketMessageTextView.hidden = YES;
-    self.closeConnectionActionButton.hidden = YES;
+-(void) viewDidAppear:(BOOL)animated{
+    
+    _scrollView.contentSize=CGSizeMake(282,328);
+
 }
+
 
 -(void) createConnection{
     //_webSocket = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.regisscis.net:8080"]]];
@@ -110,8 +107,7 @@ SRWebSocket *_webSocket;
     [_webSocket send:message];
     self.rocketStatusLabel.text = @"Sending Message";
     self.sendRocketMessageTextField.text = nil;
-    
-    
+   
     
 }
 
@@ -134,6 +130,11 @@ SRWebSocket *_webSocket;
     [self disconnect];
     
 }
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self view] endEditing:YES];
+}
+
 
 
 @end
